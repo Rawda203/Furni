@@ -1,0 +1,25 @@
+<div class="container py-5">
+    <form [formGroup]="registerForm" (ngSubmit)="submitForm(registerForm)">
+       
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" formControlName="firstname" class="form-control mb-2">
+        <div class="alert alert-danger" *ngIf="registerForm.get('firstname')?.errors && registerForm.get('firstname')?.touched">
+            <p *ngIf="registerForm.get('firstname')?.getError('pattern')">First name invalid</p>
+        </div>
+
+
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" formControlName="lastname" class="form-control mb-2">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" class="form-control mb-2">
+
+        <label for="age">Age</label>
+        <input type="number" id="age" formControlName="age" class="form-control mb-2">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" formControlName="password" class="form-control mb-2">
+
+        <button class="btn btn-info mt-2" [disabled]="registerForm.invalid">Submit</button>
+    </form>
+</div>
