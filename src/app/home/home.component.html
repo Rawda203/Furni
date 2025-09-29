@@ -1,144 +1,73 @@
-<section class="hero d-flex">
+<!-- <section class="hero d-flex align-items-center">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h1 class="hero-title" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000">
+    <div class="row align-items-center justify-content-between">
+      
+      <div class="col-lg-6">
+        <h1 class="hero-title" data-aos="fade-left" data-aos-delay="0">
           Modern Interior <br> Design Studio
         </h1>
-        <p class="hero-subtitle" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+        <p class="hero-subtitle" data-aos="fade-left" data-aos-delay="100">
           Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
         </p>
-        <div class="hero-buttons" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
-          <button type="button" class="btn btn-warning">Shop Now</button>
-          <button type="button" class="btn2">Explore</button>
+        <div class="btn-group" data-aos="fade-left" data-aos-delay="200">
+          <a href="#" class="btn btn-warning me-2">Shop Now</a>
+          <a href="#" class="btn btn-outline-dark">Explore</a>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="images">
-          <div class="image-layer animate__animated animate__fadeInUp animate__delay-1s">
-            <img src="assets/images/dots-light (1).svg" alt="">
-          </div>
-          <div class="image-1 animate__animated animate__fadeInUp animate__delay-2s">
-            <img src="assets/images/couch.png" alt="person" width="200">
-          </div>
-        </div>
+
+      <div class="col-lg-6 text-center">
+        <img src="assets/images/couch.png" alt="Couch" class="img-fluid" data-aos="fade-up" data-aos-delay="300">
       </div>
+
     </div>
   </div>
-</section>
-<!-- Shop Section -->
+</section> -->
 
-<section class="material"  data-aos="fade-up" data-aos-delay="100">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-3 mb-5 mb-lg-0 al prod-cont ">
-                <h2 class="mb-4">Crafted with excellent material.</h2>
-                <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-                    vulputate velit
-                    imperdiet dolor tempor tristique</p>
-                    <a href="#" class="prod-btn mt-2">Explore</a>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 prod">
-                <a href="#" class="prod-iteam">
-                    <img class="prod-img" src="assets/images/product-1.png" alt="">
-                    <h3>Nordic Chair</h3>
-                    <p>$50.00</p>
-                    <span><img src="assets/images/cross.svg" alt=""></span>
-                </a>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 prod">
-                <a href="#" class="prod-iteam">
-                    <img class="prod-img" src="assets/images/product-2.png" alt="">
-                    <h3>Kruzo Aero Chair</h3>
-                    <p>$78.00</p>
-                    <span><img src="assets/images/cross.svg" alt=""></span>
-                </a>
-            </div>
-            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 prod">
-                <a href="#" class="prod-iteam">
-                    <img class="prod-img" src="assets/images/product-3.png" alt="">
-                    <h3>Ergonomic Chair</h3>
-                    <p>$43.00</p>
-                    <span><img src="assets/images/cross.svg" alt=""></span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-   
-</section>
-
-<section class="bout"  data-aos="fade-up" data-aos-delay="300">
+<!-- Why Choose Us -->
+<section class="bout" data-aos="fade-up" data-aos-delay="300">
   <div class="container">
-    <div class="row justify-content-between" >
-    
-      <div class="col-lg-6 mb-5">
-        <div class="text5" data-aos="fade-left" data-aos-delay="0">
-          <h1 >Why Choose Us</h1>
-          <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+    <div class="row justify-content-between">
+
+      <div class="col-lg-6">
+        <div class="text5" data-aos="fade-left">
+          <h1>Why Choose Us</h1>
+          <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.</p>
         </div>
+
         <div class="row">
-        
-          <div class="col-6 col-md-6" data-aos="fade-left" data-aos-delay="100">
-            <div class="log">
-              <div class="icon">
-                <div class="border-1"  ></div>
-                <img src="assets/images/truck.svg" alt="">
-              </div>
-              <h5>Fast & Free Shipping</h5>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-            </div>
-          </div>
-
-          <div class="col-6 col-md-6" data-aos="fade-left" data-aos-delay="200">
+          <div
+            class="col-6 col-md-6"
+            *ngFor="let feature of features; index as i"
+            [attr.data-aos]="'fade-left'"
+            [attr.data-aos-delay]="(i + 1) * 100"
+          >
             <div class="log">
               <div class="icon">
                 <div class="border-1"></div>
-                <img src="assets/images/bag.svg" alt="">
+                <img [src]="feature.icon" [alt]="feature.title">
               </div>
-              <h5>Easy to Shop</h5>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+              <h5>{{ feature.title }}</h5>
+              <p>{{ feature.desc }}</p>
             </div>
           </div>
-
-          <div class="col-6 col-md-6"data-aos="fade-left" data-aos-delay="300">
-            <div class="log">
-              <div class="icon">
-                <div class="border-1" ></div>
-                <img src="assets/images/support.svg" alt="">
-              </div>
-              <h5>24/7 Support</h5>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-            </div>
-          </div>
-
-          <div class="col-6 col-md-6" data-aos="fade-left" data-aos-delay="400">
-            <div class="log">
-              <div class="icon">
-                <div class="border-1"></div>
-                <img src="assets/images/return.svg" alt="">
-              </div>
-              <h5>Hassle Free Returns</h5>
-              <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-            </div>
-          </div>
-
         </div>
+
       </div>
 
-    
-      <div class="col-lg-6" >
+      <div class="col-lg-6">
         <div class="img-3">
-          <div class="border-2"  data-aos="fade-left" data-aos-delay="500">
+          <div class="border-2" data-aos="fade-left" data-aos-delay="500">
             <img src="assets/images/dots-yellow.svg" alt="">
           </div>
-          <img src="assets/images/why-choose-us-img.jpg" alt=""  data-aos="fade-left" data-aos-delay="550">
+          <img src="assets/images/why-choose-us-img.jpg" alt="" data-aos="fade-left" data-aos-delay="550">
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+
 <section class="help" data-aos="fade-up" data-aos-delay="500">
   <div class="container">
     <div class="row justify-content-between">

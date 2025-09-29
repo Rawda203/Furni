@@ -1,4 +1,4 @@
- .hero {
+ .about {
     background-color: #4b6357;
     color: #fff;
     padding: 100px 0px; 
@@ -6,31 +6,15 @@
     width: 100%;
 }
 
-.hero-title {
+.about-title {
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.hero-subtitle {
+.about-subtitle {
     font-size: 18px;
     margin-bottom: 30px;
-}
-
-.hero-buttons .btn-warning {
-    background-color: #fbb034;
-    border-color: #fbb034;
-    padding: 10px 20px;
-    margin-right: 10px;
-}
-
-
-
-
-
-.hero-buttons .btn-outline-light {
-    padding: 10px 20px;
-
 }
 
 .images  .image-1 img {
@@ -49,18 +33,7 @@
      bottom: 330px;
     right: 100px;  
 }
-.shop{
-    padding-top: 100px;
-}
-.row {
-   
-    display: flex;
-    flex-wrap: wrap;
-    
-}
-.mb-5 {
-    margin-bottom: 3rem !important;
-}
+
 
 .btn {
     font-weight: 600;
